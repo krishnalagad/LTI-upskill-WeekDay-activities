@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Week1Day5_String_ContainsTrim {
+public class Week1Day5_StringBasics_4_ContainsTrim {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the text from the document");

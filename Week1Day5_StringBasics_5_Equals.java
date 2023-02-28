@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Week1Day5_String_Equals {
+public class Week1Day5_StringBasics_5_Equals {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Address 1:");

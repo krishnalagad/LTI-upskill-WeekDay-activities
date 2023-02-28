@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Week1Day5_String_StringProcessing {
+public class Week1Day5_StringBasics_2_StringProcessing {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the input string");
