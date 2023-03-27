@@ -1,4 +1,4 @@
-package Problem2;
+package Problem2_CustomerClass;
 
 import java.util.Scanner;
 

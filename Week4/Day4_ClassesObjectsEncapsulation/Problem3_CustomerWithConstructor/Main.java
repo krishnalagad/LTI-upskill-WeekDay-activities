@@ -1,4 +1,4 @@
-package Problem3;
+package Problem3_CustomerWithConstructor;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package Problem2;
+package Problem2_CustomerClass;
 
 public class Customer {
     private String customerName;

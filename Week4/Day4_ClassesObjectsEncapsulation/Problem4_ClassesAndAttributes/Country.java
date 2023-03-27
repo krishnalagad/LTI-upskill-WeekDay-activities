@@ -1,4 +1,4 @@
-package Problem4;
+package Problem4_ClassesAndAttributes;
 
 public class Country {
     public String name;

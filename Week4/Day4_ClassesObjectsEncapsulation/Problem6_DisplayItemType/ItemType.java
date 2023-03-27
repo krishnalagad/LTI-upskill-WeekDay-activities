@@ -1,4 +1,4 @@
-package Problem6;
+package Problem6_DisplayItemType;
 
 public class ItemType {
     private String name;

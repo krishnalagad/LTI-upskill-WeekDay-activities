@@ -1,4 +1,4 @@
-package Problem3;
+package Problem3_CustomerWithConstructor;
 
 public class Customer {
     String customerName;

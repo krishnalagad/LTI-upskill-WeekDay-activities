@@ -1,4 +1,4 @@
-package Problem5;
+package Problem5_GettersSetters;
 
 import java.util.Scanner;
 
