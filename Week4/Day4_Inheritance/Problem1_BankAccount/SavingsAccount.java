@@ -1,4 +1,4 @@
-package Problem1;
+package Problem1_BankAccount;
 
 public class SavingsAccount extends Account {
     private String orgName;

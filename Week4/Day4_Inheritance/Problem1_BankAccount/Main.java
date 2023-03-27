@@ -1,4 +1,4 @@
-package Problem1;
+package Problem1_BankAccount;
 
 import java.util.Scanner;
 
