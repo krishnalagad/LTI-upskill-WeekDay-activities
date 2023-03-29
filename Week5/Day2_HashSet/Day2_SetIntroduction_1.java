@@ -5,12 +5,12 @@ public class Day2_SetIntroduction_1 {
         Set<String> set = new HashSet<String>();
         Scanner sc = new Scanner(System.in);
         boolean flag = true;
-        sc.nextLine();
+
         while (flag) {
             System.out.println("Enter the username");
-            String username = sc.nextLine().trim();
+            String username = sc.next().trim();
             set.add(username);
-            System.out.println("Do you want to continue? (Y/N)");
+            System.out.println("Do you want to continue?(Y/N)");
             String str = sc.next().trim();
             if (!str.equalsIgnoreCase("y")) {
                 flag = false;
