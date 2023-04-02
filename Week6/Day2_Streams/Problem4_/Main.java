@@ -25,3 +25,4 @@ public class Main {
             System.out.printf("%-10s%s\n", employee.getName(), employee.getSalary());
         }
     }
+}
