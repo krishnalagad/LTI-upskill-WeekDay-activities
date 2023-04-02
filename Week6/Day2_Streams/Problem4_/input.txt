@@ -1,0 +1,5 @@
+Rohan,25000
+Krishna,31000
+Girish,29000
+Kiran,27000
+Rita,29500
