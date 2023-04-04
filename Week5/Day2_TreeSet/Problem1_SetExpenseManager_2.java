@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 import java.util.Set;
 
-public class Main {
+public class Problem1_SetExpenseManager_2 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
