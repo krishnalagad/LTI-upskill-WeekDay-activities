@@ -1,93 +1,113 @@
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.List;
 
 public class Day1_IntroductionToList_10 {
-    static ArrayList<Flight> flights = new ArrayList<Flight>();
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        boolean flag = true;
-        while (flag) {
-            System.out.println("\n1.Schedule Flight\n2.Change Status\n3.Display\n4.Exit");
-            System.out.println("Enter your options:");
-            int choice = sc.nextInt();
-            switch (choice) {
-                case 1:
-                    addFlightDetails(sc);
-                    break;
-                case 2:
-                    updateFlightStatus(sc);
-                    break;
-                case 3:
-                    displayFlightDetails();
-                    break;
-                case 4:
-                    flag = false;
-                    System.out.println("You are logged-out");
-                    break;
-                default:
-                    System.out.println("Invalid input. Please enter a valid option!");
-            }
-        }
-    }
+    public static void main(String[] args) throws NumberFormatException, IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    private static void addFlightDetails(Scanner sc) {
-        sc.nextLine(); // clear buffer
-        boolean flag = true;
-        int i = 1;
-        while (flag) {
-            System.out.println("Enter the flights details " + i + ":");
-            System.out.println("Enter the flight name:");
-            String flightName = sc.nextLine();
-            System.out.println("Enter the flight number:");
-            String flightNumber = sc.nextLine();
-            System.out.println("Enter the Status:");
-            String flightStatus = sc.nextLine();
-            flights.add(new Flight(flightName, flightNumber, flightStatus));
-            System.out.println("Do you want to add more flight(Yes/No):");
-            String addMore = sc.nextLine();
-            if (!addMore.equalsIgnoreCase("yes")) {
-                flag = false;
+        List<Flight> list = new ArrayList<>();
+
+        while (true) {
+            System.out.println("1.Schedule Flight\r\n" + "\r\n" + "2.change status\r\n" + "\r\n" + "3.Display\r\n"
+                    + "\r\n" + "4.Exit");
+
+            // System.out.println("Enter your options:");
+            int action = Integer.parseInt(br.readLine());
+
+            if (action == 1) {
+
+                int flightDetails = 1;
+
+                while (true) {
+                    System.out.println("Enter the flights details :" + flightDetails++);
+
+                    System.out.println("Enter the flight name:");
+                    String name = br.readLine();
+                    System.out.println("Enter the flight number:");
+                    String num = br.readLine();
+                    System.out.println("Enter the Status:");
+                    String status = br.readLine();
+
+                    Flight flight = new Flight(name, num, status);
+
+                    list.add(flight);
+
+                    System.out.println("Do you want to add more flight(Yes/No):");
+                    String toContinue = br.readLine();
+                    if (toContinue.equals("No"))
+                        break;
+                }
+
+                System.out.println("Do you want to continue");
+                String toContinue = br.readLine();
+                if (toContinue.equals("No"))
+                    break;
+
+            } else if (action == 2) {
+
+                while (true) {
+                    System.out.println("Enter the flight number:");
+                    String number = br.readLine();
+                    System.out.println("Enter the new status:");
+                    String status = br.readLine();
+
+                    Flight updateFlight = null;
+                    for (Flight flight : list) {
+                        if (flight.getFlightNumber().equals(number))
+                            updateFlight = flight;
+                    }
+
+                    updateFlight.setStatus(status);
+
+                    System.out.println("Do you want to change status(Yes/No):");
+                    String toContinue = br.readLine();
+                    if (toContinue.equals("No"))
+                        break;
+                }
+
+                System.out.println("Do you want to continue");
+                String toContinue = br.readLine();
+                if (toContinue.equals("No"))
+                    break;
+
+            } else if (action == 3) {
+                System.out.println("Flight Status");
+                int index = 1;
+
+                for (Flight flight : list) {
+                    System.out.println(flight.getFlightNumber() + "\n" + flight.getStatus());
+                }
+
+                System.out.println("Do you want to continue");
+                String toContinue = br.readLine();
+                if (toContinue.equals("No"))
+                    break;
+
             } else {
-                i += 1;
+                System.out.println("You are logged-out");
+                break;
             }
+
         }
+
     }
 
-    private static void updateFlightStatus(Scanner sc) {
-        boolean flag = true;
-        while (flag) {
-            System.out.println("Enter the flight number:");
-            int flightNumber = sc.nextInt();
-            System.out.println("Enter the new status:");
-            sc.nextLine(); // clear buffer
-            String newStatus = sc.nextLine();
-            flights.get(flightNumber - 1).setFlightStatus(newStatus);
-            System.out.println("Do you want to change status(Yes/No):");
-            String changeMore = sc.nextLine();
-            if (!changeMore.equalsIgnoreCase("yes")) {
-                flag = false;
-            }
-        }
-    }
-
-    private static void displayFlightDetails() {
-        System.out.println("Flight Status");
-        for (int i = 0; i < flights.size(); i++) {
-            System.out.println((i + 1) + " " + flights.get(i).getFlightStatus());
-        }
-    }
 }
 
 class Flight {
     private String flightName;
     private String flightNumber;
-    private String flightStatus;
+    private String Status;
 
-    public Flight(String flightName, String flightNumber, String flightStatus) {
+    public Flight(String flightName, String flightNumber, String status) {
+        super();
         this.flightName = flightName;
         this.flightNumber = flightNumber;
-        this.flightStatus = flightStatus;
+        Status = status;
     }
 
     public String getFlightName() {
@@ -106,11 +126,12 @@ class Flight {
         this.flightNumber = flightNumber;
     }
 
-    public String getFlightStatus() {
-        return flightStatus;
+    public String getStatus() {
+        return Status;
     }
 
-    public void setFlightStatus(String flightStatus) {
-        this.flightStatus = flightStatus;
+    public void setStatus(String status) {
+        Status = status;
     }
+
 }
