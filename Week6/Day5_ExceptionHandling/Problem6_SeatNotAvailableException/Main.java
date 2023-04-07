@@ -1,53 +1,48 @@
 package Problem6_SeatNotAvailableException;
 
-import java.io.*;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String[] args) throws Exception {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the number of rows and columns of the show:");
+        int size = s.nextInt();
+        System.out.println("Enter the number of seats to be booked:");
+        int num_of_seats = s.nextInt();
+        int seats[][] = new int[size][size];
+        int count = 0;
 
         try {
-            System.out.println("Enter the number of rows and columns of the show:");
-            int n = Integer.parseInt(reader.readLine());
-            int[][] seats = new int[n][n];
-
-            System.out.println("Enter the number of seats to be booked:");
-            int numSeats = Integer.parseInt(reader.readLine());
-
-            for (int i = 0; i < numSeats; i++) {
+            for (int i = 0; i < num_of_seats; i++) {
                 System.out.println("Enter the seat number " + (i + 1));
-                int seatNum = Integer.parseInt(reader.readLine());
-
-                if (seatNum < 0 || seatNum >= n * n) {
-                    throw new ArrayIndexOutOfBoundsException(""+seatNum);
+                count = s.nextInt();
+                if (count >= size * size) {
+                    throw new ArrayIndexOutOfBoundsException("" + count);
                 }
-
-                int row = seatNum / n;
-                int col = seatNum % n;
-
-                if (seats[row][col] == 1) {
+                int row = count / size;
+                int col = count % size;
+                if (seats[row][col] == 0) {
+                    seats[row][col] = 1;
+                } else {
                     throw new SeatNotAvailableException("Already Booked");
                 }
 
-                seats[row][col] = 1;
             }
-
-            System.out.println("The seats booked are:");
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
-                    System.out.print(seats[i][j] + " ");
-                }
-                System.out.println();
-            }
-
-        } catch (IOException e) {
-            System.out.println(e.toString());
-        } catch (NumberFormatException e) {
-            System.out.println(e.toString());
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println(e.toString());
         } catch (SeatNotAvailableException e) {
-            System.out.println(e.toString());
+            System.out.println(e);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(e);
+        } finally {
+            System.out.println("The seats booked are:");
+            for (int i = 0; i < size; i++) {
+                {
+                    for (int j = 0; j < size; j++) {
+                        System.out.print(seats[i][j] + " ");
+                    }
+                    System.out.println("");
+                    s.close();
+                }
+            }
         }
     }
 }
