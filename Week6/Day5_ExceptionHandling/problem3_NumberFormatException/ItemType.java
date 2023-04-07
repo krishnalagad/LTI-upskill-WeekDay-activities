@@ -1,4 +1,4 @@
-package problem3_NumberFormatException;
+package Problem3_NumberFormatException;
 
 class ItemType {
     private String name;

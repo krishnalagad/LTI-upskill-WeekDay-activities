@@ -1,4 +1,4 @@
-package problem3_NumberFormatException;
+package Problem3_NumberFormatException;
 
 import java.util.Scanner;
 
