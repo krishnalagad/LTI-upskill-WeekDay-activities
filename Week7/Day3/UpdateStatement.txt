@@ -1,0 +1,11 @@
+Problem 1: 
+
+UPDATE slab SET from_unit = 1 WHERE from_unit = 0;
+
+Problem 2:
+
+UPDATE building_type SET name = 'Mall' WHERE name = 'Shopping Mall';
+
+Problem 3:
+
+UPDATE building SET owner_name = 'Aiden' WHERE owner_name = 'Haidil';
