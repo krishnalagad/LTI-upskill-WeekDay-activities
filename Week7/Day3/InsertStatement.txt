@@ -1,0 +1,30 @@
+Problem 1:
+
+INSERT INTO electricity_connection_type VALUES 
+  		(10, 'Home'),
+  		(11, 'School');
+
+Problem 2:
+
+INSERT INTO slab VALUES
+			(11, 10, 34, 56, 56.78),
+            (12, 11, 34, 56, 56.78),
+            (13, 10, 34, 56, 56.78);
+
+Problem 3:
+
+INSERT INTO building_type VALUES
+		(11, 'Home', 10),
+        (12, 'Home', 10),
+        (13, 'Home', 10),
+        (14, 'Home', 10),
+        (15, 'Home', 10);
+
+Problem 4:
+
+INSERT INTO building VALUES
+		(11, 'krishna', 'Pune', 101, '9890987654', 'krishna@gmail.com'),
+        (12, 'krishna', 'Pune', 101, '9890987654', 'krishna@gmail.com'),
+        (13, 'krishna', 'Pune', 101, '9890987654', 'krishna@gmail.com'),
+        (14, 'krishna', 'Pune', 101, '9890987654', 'krishna@gmail.com'),
+        (15, 'krishna', 'Pune', 101, '9890987654', 'krishna@gmail.com');
