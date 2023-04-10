@@ -1,0 +1,11 @@
+Problem 1:
+
+TRUNCATE slab;
+
+Problem 2:
+
+DELETE FROM building_type WHERE connection_type_id = 1;
+
+Problem 3:
+
+DELETE FROM building WHERE owner_name = 'Muhammad Hafaz';
