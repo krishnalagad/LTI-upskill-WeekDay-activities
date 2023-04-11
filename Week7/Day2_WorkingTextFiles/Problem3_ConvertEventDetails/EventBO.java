@@ -11,12 +11,15 @@ public class EventBO {
                 file.createNewFile();
             }
             bw.write("Event details");
+            bw.newLine();
             bw.write("Event name:" + event.getName());
+            bw.newLine();
             bw.write("Event details:" + event.getDetails());
+            bw.newLine();
             bw.write("Event manager:" + event.getManager());
             bw.close();
         } catch (Exception e) {
-            
+
         }
 
     }
