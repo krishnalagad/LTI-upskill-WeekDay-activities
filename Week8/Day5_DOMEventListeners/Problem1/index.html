@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample Webpage</title>
+	<style>
+		p {
+			color: #000000;
+			font-size: 20px;
+		}
+	</style>
+	<script>
+		function red() {
+			document.getElementById("myPara").style.color = "#ff0000";
+		}
+		function yellow() {
+			document.getElementById("myPara").style.color = "#ffff00";
+		}
+	</script>
+</head>
+<body>
+	<p id="myPara" onmouseover="red()" onmouseout="yellow()">HTML5 is a software solution stack that defines the properties and behaviors of web page content by implementing a markup based pattern to it. HTML5 is the fifth and current major version of HTML</p>
+</body>
+</html>
