@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Working with Variables in JavaScript</title>
+    <script>
+      function checkDataType() {
+			var inputValue = document.getElementById("demo").value;
+			if (isNaN(inputValue)) {
+				document.getElementById("result").innerHTML = "Not Numeric";
+			} else {
+				document.getElementById("result").innerHTML = "Numeric";
+			}
+		}
+    </script>
+  </head>
+  <body>
+    <h1>Please input a number</h1>
+    <label for="demo">Enter a value:</label>
+    <input type="text" id="demo" name="demo" />
+    <button onclick="checkDataType()">Click Me!</button>
+    <p id="result"></p>
+  </body>
+</html>
