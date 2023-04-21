@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Typing Event</title>
+	<script src="./script.js"></script>
+	<style type="text/css">
+		body {
+			text-align: center;
+		}
+		h1 {
+			margin-top: 100px;
+		}
+		#instructions {
+			margin-top: 50px;
+			margin-bottom: 50px;
+			text-align: center;
+		}
+		#start {
+			padding: 10px 20px;
+			font-size: 16px;
+			/* background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer; */
+		}
+		#gamePage {
+			margin-top: 50px;
+			text-align: center;
+		}
+		h2 {
+			margin-bottom: 20px;
+		}
+		#typedWord {
+			font-size: 22px;
+			/* font-weight: bold; */
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+<body>
+	<h1>Typewriting Event</h1>
+	<div id="instructions">
+		<h2>Instructions:</h3>
+		<p>The participant should see only themonitor and type their name.</p>
+		<p>If the name is written correctly then the participant can receive a small gift.</p>
+	</div>
+	<button id="start" onclick="showGamePage()">Start the game</button>
+	<div id="gamePage" style="display: none;">
+		<h2>Start Typing Your Name</h2>
+		<span id="typedWord"></span>
+	</div>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Typewriting Event</title>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+		}
+		#instructions {
+			margin: 20px;
+		}
+		button {
+			display: block;
+			margin: 20px auto;
+			padding: 10px;
+			font-size: 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		#gamePage {
+			display: none;
+			margin: 20px;
+		}
+		#typedWord {
+			font-size: 24px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1>Typewriting Event</h1>
+	<div id="instructions">
+		<p>Type your name as fast as you can!</p>
+		<p>Use the keyboard to enter letters.</p>
+	</div>
+	<button id="start" onclick="showGamePage()">Start the game</button>
+	<div id="gamePage">
+		<h2>Start typing your name</h2>
+		<p>Type here: <span id="typedWord"></span></p>
+	</div>
+	<script type="text/javascript">
+		function showGamePage() {
+			document.getElementById("gamePage").style.display = "block";
+			document.getElementById("start").style.display = "none";
+			document.onkeydown = function(event) {
+				let keyCode = event.keyCode;
+				let letter = String.fromCharCode(keyCode).toUpperCase();
+				document.getElementById("typedWord").innerHTML += letter;
+			}
+		}
+	</script>
+</body>
+</html> -->
