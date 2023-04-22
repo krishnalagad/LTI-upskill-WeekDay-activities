@@ -1,54 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Registration Form</title>
-    <style type="text/css">
-      label {
-        display: inline-block;
-        width: 100px;
-        text-align: right;
-        margin-right: 10px;
-      }
-      input[type="text"] {
-        width: 200px;
-        padding: 5px;
-        margin-bottom: 10px;
-      }
-      button {
-        background-color: #008cba;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      button:focus {
-        background-color: red;
-      }
+<html lang="en">
+<head>
+    <style>
+        .container{
+        text-align: center;
+        }
+        .mycol{
+            background-color: red;
+        }
+        
     </style>
-  </head>
-  <body>
-    <h2>Registration Form</h2>
-    <form>
-      <label for="fname">First Name:</label>
-      <input
-        type="text"
-        id="fname"
-        name="fname"
-        onblur="capitalizeFirstLetter(this)"
-      />
-      <br />
-      <label for="lname">Last Name:</label>
-      <input
-        type="text"
-        id="lname"
-        name="lname"
-        onblur="capitalizeFirstLetter(this)"
-      />
-      <br />
-      <button type="submit" onfocus="changeBackgroundColor()">Submit</button>
-    </form>
-
-    <script src="script.js"></script>
-  </body>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+    <label for="firstname">First Name :</label>
+    <input type="text" id="firstname">
+    <br>
+    <br>
+    <label for="lastname">Last Name :</label>
+    <input type="text" id="lastname">
+    <br>
+    <br>
+    <label for="password">Password :</label>
+    <input type="password" id="password">
+    <br>
+    <br>
+    <label for="mobilenumber">Mobile Number :</label>
+    <input type="number" id="mobilenumber">
+    <br>
+    <br>
+    <label for="address">Address :</label>
+    <input type="text" id="address">
+    <br>
+    <br>
+    <button id="register" type="submit" onfocus="nun()">Register</button>
+</div>
+<script defer src="script.js"></script>
+</body>
 </html>
