@@ -1,5 +1,5 @@
-import * as fs from "fs";
-
+declare var require: any;
+let fs = require("fs");
 fs.readFile("input.txt", "utf8", (err, data) => {
   if (err) throw err;
 

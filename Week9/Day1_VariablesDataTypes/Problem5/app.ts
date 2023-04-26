@@ -1,4 +1,5 @@
-import * as fs from "fs";
+declare var require: any;
+let fs = require("fs");
 
 enum Players {
   Hardhik33 = "Hardik Pandya",
@@ -22,6 +23,6 @@ fs.readFile("input.txt", "utf8", (err, data) => {
   if (playerName) {
     console.log(playerName);
   } else {
-    console.log("No player found");
+    console.log("No players found");
   }
 });
